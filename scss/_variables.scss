@@ -1,0 +1,45 @@
+/* Config Social Media */
+
+$social-colorbase: rgb(27, 25, 25);
+$social-size: 3em;
+$social-margin: 0 10px 0 10px;
+
+$tw:  #00acee  !default;
+$fb:  #3b5998  !default;
+$lin: #0e76a8  !default;
+$pin: #c8232c  !default;
+$git: #525252  !default;
+$atc: #fff     !default;
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "tw":         $tw,
+    "fb":         $fb,
+    "lin":        $lin,
+    "pin":        $pin,
+    "git":        $git,
+    "atc":        $atc
+  ),
+  $colors
+);
+
+$twitter:   $tw  !default;
+$facebook:  $fb  !default;
+$linkedin:  $lin !default;
+$pinterest: $pin !default;
+$github:    $git !default;
+$at:        $atc !default;
+
+$social-themes: () !default;
+$social-themes: map-merge(
+  (
+    "twitter":    $twitter,
+    "facebook":   $facebook,
+    "linkedin":   $linkedin,
+    "pinterest":  $pinterest,
+    "github":     $github,
+    "at":         $at
+  ),
+  $social-themes
+);

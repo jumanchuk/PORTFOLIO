@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profesional IT, Full Stack Web and .Net Developer. Buenos Aires, Argentina.">
+    <meta name="keywords"
+        content="FREELANCE, .NET, HTML, JS, JAVASCRIPT, REACT, NODE, SQL, ORACLE, FULL STACK DEVELOPER">
+    <title>Portfolio Web, Jury Umanchuk</title>
+
+    <!-- hreflang -->
+    <!--<link rel=”alternate” hreflang=”es-ES” href=”https://www.midominio.com/“/>
+    <link rel=”alternate” hreflang=”fr-FR” href=”https://www.midominio.fr/“/>
+    <link rel=”alternate” hreflang=”de-DE” href=”https://www.midominio.de/“/>-->
+
+    <!-- Custom SASS CSS -->
+    <link rel="stylesheet" href="css/style-scss.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+    <!-- Video for Background -->
+    <video autoplay muted loop id="myVideo">
+        <source src="video/video.mp4" type="video/mp4">
+    </video>
+
+    <!-- <div style="position: fixed; z-index: -99; width: 100%; height: 100%;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/uUXUJSGbuqc?version=3&controls=0&autoplay=1&mute=1&loop=1&iv_load_policy=3&playlist=uUXUJSGbuqc" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen loop></iframe>
+    </div>-->
+
+
+    <!-- nav-bar -->
+    <div class="topnav" id="navBar">
+        <a class="logo active" href="index.html">LOGO</a>
+        <a id="navItem0" href="#About" onclick="navHide(); navigateMenu(0);">About Me</a>
+        <a id="navItem1" href="#Education" onclick="navHide(); navigateMenu(1);">Education</a>
+        <a id="navItem2" href="#Experience" onclick="navHide(); navigateMenu(2);">Experience</a>
+        <a id="navItem3" href="#Skills" onclick="navHide(); navigateMenu(3);">Skills</a>
+        <a id="navItem4" href="#Portfolio" onclick="navHide(); navigateMenu(4);">Portfolio</a>
+        <a href="javascript:void(0);" class="icon" onclick="navBarFn()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- traduction screen -->
+    <div id="traduction-screen" class="center-screen d-none" style="color:white;">
+        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+        <h3 id="test"></h3>
+    </div>
+
+    <main role="main" class="flex-shrink-0 hidden">
+        <!-- content -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1 col-lg-1 d-none d-lg-block">
+                    <!-- menu rotate -90 -->
+                    <ul class="menu">
+                        <!--Internal Links-->
+                        <li class="menuItem">
+                            <div><a id="item0" href="#About" onclick="navigateMenu(0)">About Me</a></div>
+                        </li>
+                        <li class="menuItem">
+                            <div><a id="item1" href="#Education" onclick="navigateMenu(1)">Education</a></div>
+                        </li>
+                        <li class="menuItem">
+                            <div><a id="item2" href="#Experience" onclick="navigateMenu(2)">Experience</a></div>
+                        </li>
+                        <li class="menuItem">
+                            <div><a id="item3" href="#Skills" onclick="navigateMenu(3)">Skills</a></div>
+                        </li>
+                        <li class="menuItem">
+                            <div><a id="item4" href="#Portfolio" onclick="navigateMenu(4)">Portfolio</a></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-11 col-lg-11">
+                    <div id="carouselWeb" class="carousel vert slide carousel-fade" data-ride="carousel"
+                        data-interval="5000" data-pause="hover">
+                        <div class="container-flud">
+                            <div class="row fullScreen">
+                                <div class="col-lg-11 content col-md-11">
+                                    <div class="carousel-inner">
+                                        <!--First Slide-->
+                                        <div id="slideItem0" class="carousel-item active">
+                                            <div class="row item">
+                                                <div class="col-md-6 d-none d-sm-block">
+                                                    <img class="d-block mx-auto img-fluid" src="img/face-on-shadow.png"
+                                                        alt="First slide">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="contentFront ">
+                                                        <h1 class="section__title section__title--roboto">About Me</h1>
+
+                                                        <p class="section__paragraph"> <span
+                                                                class="section__paragraph--important">¡HELLO
+                                                                WORLD!</span> My name is Jury Umanchuk and I'm a It
+                                                            professional
+                                                            with more than 10 years of experience in the
+                                                            financial sector, extensive knowledge in information systems
+                                                            administration, software development, functional analysis
+                                                            and
+                                                            project management. Leadership and teamwork qualities,
+                                                            focused on
+                                                            goals and characterized by results.</p>
+                                                        <br><br>
+                                                        <h3>"Walking on water and developing software from a
+                                                            specification are
+                                                            easy if both are frozen."</h3>
+                                                        <p>Edward V. Berard</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--Second Slide-->
+                                        <div id="slideItem1" class="carousel-item">
+                                            <div class="row item">
+                                                <div class="col-md-6 d-none d-sm-block">
+                                                    <div class="contentFront">
+                                                        <h1 class="section__title section__title--roboto">Education</h1>
+
+                                                        <p class="section__paragraph">Lorem ipsum dolor, sit amet
+                                                            consectetur adipisicing elit.
+                                                            Placeat
+                                                            molestiae, nemo qui ex non,
+                                                            odit sunt fuga architecto quo in hic minima aut dignissimos.
+                                                            Numquam quasi odio necessitatibus
+                                                            reiciendis repellendus.</p>
+                                                        <p class="section__paragraph">Lorem ipsum dolor, sit amet
+                                                            consectetur adipisicing elit.
+                                                            Placeat
+                                                            molestiae, nemo qui ex non,
+                                                            odit sunt fuga architecto quo in hic minima aut dignissimos.
+                                                            Numquam quasi odio necessitatibus
+                                                            reiciendis repellendus.</p>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <ul class="timeline">
+                                                        <li>
+                                                            <a href="#" data-toggle="modal"
+                                                                data-target="#educationModal1" onclick="pauseCarousel()"
+                                                                onmouseover="beep()">Desarrollo Full Stack</a>
+                                                            <a class="float-right">2021</a>
+                                                            <p>Coderhouse.</p>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal"
+                                                                data-target="#educationModal2" onclick="pauseCarousel()"
+                                                                onmouseover="beep()">Experto Universitario en .Net</a>
+                                                            <a class="float-right">2020</a>
+                                                            <p>Universidad Tecnológica Nacional.</p>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal"
+                                                                data-target="#educationModal3" onclick="pauseCarousel()"
+                                                                onmouseover="beep()">Diplomado en Webmaster</a>
+                                                            <a class="float-right">2015</a>
+                                                            <p>Universidad Rafael Belloso Chacín.</p>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal"
+                                                                data-target="#educationModal4" onclick="pauseCarousel()"
+                                                                onmouseover="beep()">Ing. En Informatica</a>
+                                                            <a class="float-right">2011</a>
+                                                            <p>Universidad Rafael Belloso Chacín.</p>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal"
+                                                                data-target="#educationModal5" onclick="pauseCarousel()"
+                                                                onmouseover="beep()">Associate of Science (A.S.)</a>
+                                                            <a class="float-right">2009</a>
+                                                            <p>Atlantis University.</p>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" data-toggle="modal"
+                                                                data-target="#educationModal6" onclick="pauseCarousel()"
+                                                                onmouseover="beep()">T.S.U. En Informatica</a>
+                                                            <a class="float-right">2009</a>
+                                                            <p>Instituto de Tecnologia Readic UNIR.</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Third Slide-->
+                                        <div id="slideItem2" class="carousel-item">
+                                            <div class="row item">
+                                                <div class="col-md-6 d-none d-sm-block">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-dist-6 col-lg-4 scaleZoom">
+                                                                <a href="#"><img class="d-block mx-auto img-fluid"
+                                                                        src="img/logo-bod.png" alt="Experience 1"
+                                                                        onmouseover="beep()"></a>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4 scaleZoom">
+                                                                <a href="#"><img class="d-block mx-auto img-fluid"
+                                                                        src="img/logo-eco.png" alt="Experience 2"
+                                                                        onmouseover="beep()"></a>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4 scaleZoom">
+                                                                <a href="#"><img class="d-block mx-auto img-fluid "
+                                                                        src="img/logo-tshop.png" alt="Experience 3"
+                                                                        onmouseover="beep()"></a>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4 scaleZoom">
+                                                                <a href="#"><img class="d-block mx-auto img-fluid "
+                                                                        src="img/logo-hipotec.png" alt="Experience 4"
+                                                                        onmouseover="beep()"></a>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4 scaleZoom">
+                                                                <a href="#"><img class="d-block mx-auto img-fluid "
+                                                                        src="img/logo-seg.png" alt="Experience 5"
+                                                                        onmouseover="beep()"></a>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-4 scaleZoom">
+                                                                <a href="#"><img class="d-block mx-auto img-fluid "
+                                                                        src="img/logo-iudu.png" alt="Experience 6"
+                                                                        onmouseover="beep()"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="contentFront">
+                                                        <h1 class="section__title section__title--roboto">Experience
+                                                        </h1>
+
+                                                        <p class="section__paragraph">During my more than 10 years of
+                                                            experience, I had the opportunity to work in different areas
+                                                            of the Systems area, mainly in the financial area.</p>
+                                                        <p class="section__paragraph">Between 2011 and 2016, I worked as
+                                                            administrator of the Call center platform of Banco
+                                                            Occidental de Discounts, BOD. I also had the opportunity to
+                                                            lead a small management team, where we mainly take care of
+                                                            providing relevant information for decision-making, in
+                                                            addition to monitoring goals, indicators and KPIs of all the
+                                                            managements that make up the VP. of operations and
+                                                            Electronic Channels.</p>
+                                                        <p class="section__paragraph">In 2016, I made the decision to
+                                                            add international experience, so I started working as a
+                                                            Specialist and Developer of HP Service Manager for Banco
+                                                            Hipotecario, this through the consulting firm Ecosistemas.
+                                                            At the end of 2016, it became a leader in the accounting
+                                                            integration of the Shoppig Card Advanced Default system, and
+                                                            later a Leader of visual applications.</p>
+                                                        <p class="section__paragraph">Once again in 2019, I returned to
+                                                            Banco Hipotecario, this time to participate in the Merger
+                                                            with Shopping Card project, as well as in the Sqr migration
+                                                            project, to .Net Core technology.
+                                                            At present I am the Integration Leader of the Core System of
+                                                            Supervielle Seguros with the SAP Accounting System.</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Fourth Slide-->
+                                        <div id="slideItem3" class="carousel-item">
+                                            <div class="row item">
+                                                <div class="col-md-6 d-none d-sm-block">
+                                                    <!--<img class="d-block mx-auto img-fluid " src="img/bombilla-off.png"
+                                                        alt="Fourth slide">-->
+                                                    <div class="light-bulb"></div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="contentFront">
+                                                        <h1 class="section__title section__title--roboto">SKILLS</h1>
+
+                                                        <p class="section__paragraph">Lorem ipsum dolor, sit amet
+                                                            consectetur adipisicing elit.
+                                                            Placeat
+                                                            molestiae, nemo qui ex non,
+                                                            odit sunt fuga architecto quo in hic minima aut dignissimos.
+                                                            Numquam quasi odio necessitatibus
+                                                            reiciendis repellendus.</p>
+
+                                                        <p class="section__paragraph">Lorem ipsum dolor, sit amet
+                                                            consectetur adipisicing elit.
+                                                            Atque
+                                                            reprehenderit eos assumenda exercitationem, quo voluptates
+                                                            fuga
+                                                            debitis amet. Dignissimos at eveniet, natus et cumque
+                                                            repellat
+                                                            ipsa
+                                                            quibusdam quod? Repellendus, ea!</p>
+
+                                                        <div class="flexGrid">
+                                                            <div class="childFlex">
+                                                                <img class="d-block mx-auto img-fluid "
+                                                                    src="img/skill-html.png" alt="Skill One">
+                                                            </div>
+                                                            <div class="childFlex">
+                                                                <img class="d-block mx-auto img-fluid "
+                                                                    src="img/skill-css.png" alt="Skill Two">
+                                                            </div>
+                                                            <div class="childFlex">
+                                                                <img class="d-block mx-auto img-fluid "
+                                                                    src="img/skill-bootstrap.png" alt="Skill Three">
+                                                            </div>
+                                                            <div class="childFlex">
+                                                                <img class="d-block mx-auto img-fluid "
+                                                                    src="img/skill-js.png" alt="Skill Four">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--Fifth Slide-->
+                                        <div id="slideItem4" class="carousel-item">
+                                            <div class="row item">
+                                                <div class="col-md-6 d-none d-sm-block">
+                                                    <img class="d-block mx-auto img-fluid " src="img/test.png"
+                                                        alt="Fifth slide">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="contentFront">
+                                                        <h1 class="section__title section__title--roboto">Portfolio</h1>
+
+                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                            Placeat
+                                                            molestiae, nemo qui ex non,
+                                                            odit sunt fuga architecto quo in hic minima aut dignissimos.
+                                                            Numquam quasi odio necessitatibus
+                                                            reiciendis repellendus.</p>
+                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                            Placeat
+                                                            molestiae, nemo qui ex non,
+                                                            odit sunt fuga architecto quo in hic minima aut dignissimos.
+                                                            Numquam quasi odio necessitatibus
+                                                            reiciendis repellendus.</p>
+
+                                                        <div class="gridWeb">
+                                                            <div><a href="#">Pagina Web 1</a></div>
+                                                            <div><a href="#">Pagina Web 2</a></div>
+                                                            <div><a href="#">Pagina Web 3</a></div>
+                                                            <div><a href="#">Pagina Web 4</a></div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- End Slides -->
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-1 d-none d-lg-block">
+                                    <ul class="carousel-indicators rotate">
+                                        <li id="indicator0" class="indicator" data-target="#carouselIndicators"
+                                            data-slide-to="0" class="active"></li>
+                                        <li id="indicator1" class="indicator" data-target="#carouselIndicators"
+                                            data-slide-to="1"></li>
+                                        <li id="indicator2" class="indicator" data-target="#carouselIndicators"
+                                            data-slide-to="2"></li>
+                                        <li id="indicator3" class="indicator" data-target="#carouselIndicators"
+                                            data-slide-to="3"></li>
+                                        <li id="indicator4" class="indicator" data-target="#carouselIndicators"
+                                            data-slide-to="4"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="footer fixed-bottom mt-auto py-1">
+        <div class="d-flex justify-content-between bd-highlight mb-3">
+            <div class="p-2 bd-highlight">
+                <a href="#" data-toggle="modal" data-target="#contactModal"><i class="fas fa-at"></i></a>
+            </div>
+            <div class="p-2 bd-highlight w-rights d-none d-lg-block">Jury Umanchuk - All Rights Reserved © 2021</div>
+            <div class="p-2 bd-highlight">
+                <label class="switchLanguaje">
+                    <input id="checkbox-trad" type="checkbox" onclick="traduct(this)">
+                    <div class="btnSlide round">Spanish</div>
+                </label>
+            </div>
+        </div>
+    </footer>
+
+    <!-- The Contact Modal -->
+    <div class="modal fade" id="contactModal">
+        <div class="modal-dialog modal-dialog-contact">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Contact me</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12 d-flex justify-content-center">
+                            </div>
+                            <div class="col-lg-4 d-flex justify-content-center">
+                                <iframe class="contact-iframe" src="contact.html" height="600px"
+                                    frameBorder="0"></iframe>
+                            </div>
+                            <div class="col-lg-8 d-flex justify-content-center">
+                                <iframe class="maps-iframe"
+                                    src="https://maps.google.com/maps?q=Peron%203548%20Almagro%20argentina&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                    width="80%" height="80%" frameborder="0" scrolling="no" marginheight="0"
+                                    marginwidth="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer d-flex justify-content-center">
+                    <span>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Modal -->
+
+    <!-- Coder House Modal -->
+    <div class="modal fade" id="educationModal1">
+        <div class="modal-dialog modal-dialog-education">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h1 class="modal__title modal__title--uppercase">Desarrollo Full Stack</h1>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 bd-highlight"><span
+                                        class="modal__paragraph modal__paragraph--important">Creación de aplicaciones
+                                        modernas utilizando el MERN stack</span>. Programadas en Javascript
+                                    del lado del servidor aplicando técnicas asincrónicas.</div>
+                                <div class="p-2 bd-highlight">ReactJS: Diseño de componentes eficientes y experiencias
+                                    de navegabilidad
+                                    escalables, utilizando patrones y sintaxis de ES6 y JSX . Firebase para poder
+                                    almacenar y consultar información dinámica, cambiante y reactiva.</div>
+                                <div class="p-2 bd-highlight">Desarrollo de aplicaciones SPA y diseño de prototipos.
+                                </div>
+                                <div class="p-2 bd-highlight">Soluciones web interactivas en cualquiera framework
+                                    JavaScript.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer d-flex justify-content-center">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Coder House Modal -->
+
+    <!-- Experto Universitario en .Net -->
+    <div class="modal fade" id="educationModal2">
+        <div class="modal-dialog modal-dialog-education">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h1 class="modal__title modal__title--uppercase">Experto Universitario en .Net</h1>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 bd-highlight"><span
+                                        class="modal__paragraph modal__paragraph--important">Creación de aplicaciones
+                                        modernas utilizando el MERN stack</span>. Programadas en Javascript
+                                    del lado del servidor aplicando técnicas asincrónicas.</div>
+                                <div class="p-2 bd-highlight">ReactJS: Diseño de componentes eficientes y experiencias
+                                    de navegabilidad
+                                    escalables, utilizando patrones y sintaxis de ES6 y JSX . Firebase para poder
+                                    almacenar y consultar información dinámica, cambiante y reactiva.</div>
+                                <div class="p-2 bd-highlight">Desarrollo de aplicaciones SPA y diseño de prototipos.
+                                </div>
+                                <div class="p-2 bd-highlight">Soluciones web interactivas en cualquiera framework
+                                    JavaScript.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer d-flex justify-content-center">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Experto Universitario en .Net -->
+
+    <!-- Experto Universitario en .Net -->
+    <div class="modal fade" id="educationModal3">
+        <div class="modal-dialog modal-dialog-education">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h1 class="modal__title modal__title--uppercase">Diplomado en Webmaster</h1>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 bd-highlight"><span
+                                        class="modal__paragraph modal__paragraph--important">Creación de aplicaciones
+                                        modernas utilizando el MERN stack</span>. Programadas en Javascript
+                                    del lado del servidor aplicando técnicas asincrónicas.</div>
+                                <div class="p-2 bd-highlight">ReactJS: Diseño de componentes eficientes y experiencias
+                                    de navegabilidad
+                                    escalables, utilizando patrones y sintaxis de ES6 y JSX . Firebase para poder
+                                    almacenar y consultar información dinámica, cambiante y reactiva.</div>
+                                <div class="p-2 bd-highlight">Desarrollo de aplicaciones SPA y diseño de prototipos.
+                                </div>
+                                <div class="p-2 bd-highlight">Soluciones web interactivas en cualquiera framework
+                                    JavaScript.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer d-flex justify-content-center">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Experto Universitario en .Net -->
+
+    <!-- Experto Universitario en .Net -->
+    <div class="modal fade" id="educationModal4">
+        <div class="modal-dialog modal-dialog-education">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h1 class="modal__title modal__title--uppercase">Ing. En Informatica</h1>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 bd-highlight"><span
+                                        class="modal__paragraph modal__paragraph--important">Creación de aplicaciones
+                                        modernas utilizando el MERN stack</span>. Programadas en Javascript
+                                    del lado del servidor aplicando técnicas asincrónicas.</div>
+                                <div class="p-2 bd-highlight">ReactJS: Diseño de componentes eficientes y experiencias
+                                    de navegabilidad
+                                    escalables, utilizando patrones y sintaxis de ES6 y JSX . Firebase para poder
+                                    almacenar y consultar información dinámica, cambiante y reactiva.</div>
+                                <div class="p-2 bd-highlight">Desarrollo de aplicaciones SPA y diseño de prototipos.
+                                </div>
+                                <div class="p-2 bd-highlight">Soluciones web interactivas en cualquiera framework
+                                    JavaScript.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer d-flex justify-content-center">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Experto Universitario en .Net -->
+
+    <!-- Experto Universitario en .Net -->
+    <div class="modal fade" id="educationModal5">
+        <div class="modal-dialog modal-dialog-education">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h1 class="modal__title modal__title--uppercase">Associate of Science (A.S.)</h1>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 bd-highlight"><span
+                                        class="modal__paragraph modal__paragraph--important">Creación de aplicaciones
+                                        modernas utilizando el MERN stack</span>. Programadas en Javascript
+                                    del lado del servidor aplicando técnicas asincrónicas.</div>
+                                <div class="p-2 bd-highlight">ReactJS: Diseño de componentes eficientes y experiencias
+                                    de navegabilidad
+                                    escalables, utilizando patrones y sintaxis de ES6 y JSX . Firebase para poder
+                                    almacenar y consultar información dinámica, cambiante y reactiva.</div>
+                                <div class="p-2 bd-highlight">Desarrollo de aplicaciones SPA y diseño de prototipos.
+                                </div>
+                                <div class="p-2 bd-highlight">Soluciones web interactivas en cualquiera framework
+                                    JavaScript.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer d-flex justify-content-center">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Experto Universitario en .Net -->
+
+
+    <!-- Experto Universitario en .Net -->
+    <div class="modal fade" id="educationModal6">
+        <div class="modal-dialog modal-dialog-education">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h1 class="modal__title modal__title--uppercase">T.S.U. En Informatica</h1>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 bd-highlight"><span
+                                        class="modal__paragraph modal__paragraph--important">Creación de aplicaciones
+                                        modernas utilizando el MERN stack</span>. Programadas en Javascript
+                                    del lado del servidor aplicando técnicas asincrónicas.</div>
+                                <div class="p-2 bd-highlight">ReactJS: Diseño de componentes eficientes y experiencias
+                                    de navegabilidad
+                                    escalables, utilizando patrones y sintaxis de ES6 y JSX . Firebase para poder
+                                    almacenar y consultar información dinámica, cambiante y reactiva.</div>
+                                <div class="p-2 bd-highlight">Desarrollo de aplicaciones SPA y diseño de prototipos.
+                                </div>
+                                <div class="p-2 bd-highlight">Soluciones web interactivas en cualquiera framework
+                                    JavaScript.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer d-flex justify-content-center">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Experto Universitario en .Net -->
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/9685566283.js" crossorigin="anonymous"></script>
+
+    <script>
+        $(".modal").on('hide.bs.modal', function () {
+            $('.carousel').carousel({ pause: "false" });
+        });
+    </script>
+
+    <!-- Sounds -->
+    <audio id="switchSound" src="sound/info.mp3"></audio>
+    <audio id="beep" src="sound/beep.mp3"></audio>
+
+</body>
+
+</html>

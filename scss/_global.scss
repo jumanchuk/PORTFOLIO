@@ -1,0 +1,395 @@
+/* Config Grid Portafoli */
+
+$gridWeb-display: grid;
+$gridWeb-columns: 1fr 1fr;
+$gridWeb-rowns: auto;
+$gridWeb-justify: center;
+$gridWeb-align: center;
+$gridWeb-margin: 15px;
+$gridWeb-fontcolor: #fff;
+$gridWeb-background: transparent;
+
+/* Rotate */
+
+$transform-translateX: 50%;
+$transform-translateY: 50%;
+$transform-rotate: 90deg;
+
+/* Zoom Effect */
+$scaleZoom-x: 1.1;
+$scaleZoom-y: 1.1;
+
+/* Custom Responsive Grid */
+
+$col-w: 100%;
+
+
+body{
+    background-color: rgb(0, 0, 0) !important;
+    block-size: 300px;
+}
+
+  .img-fluid{
+    margin: 10px;
+  } 
+
+  .flexGrid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &  .childFlex {
+      padding: 15px;
+    }
+
+  }
+  
+  .fullScreen{
+      height: 100vh;
+  }
+  
+  .rotate{
+    transform: translate($transform-translateX,$transform-translateY);
+    transform: rotate($transform-rotate);
+  }
+
+  li {
+    & a{
+        color: white;
+        text-decoration: none !important;
+        font-size: 16px;
+    }
+  }
+
+  .content {
+    padding-top: 10%;
+  }
+
+  .logo {
+    left: 0px;
+    margin: 0px;
+    color: rgb(219, 0, 0) !important;
+    display: inline;
+    text-decoration: none;
+  }
+
+  .item {
+    color: white;
+  }
+
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+@mixin sizes($rsp-width, $rsp-height) {
+    width: $rsp-width;
+    height: $rsp-height;
+ }
+
+.responsive {
+    @include sizes(100%, auto);
+}
+   
+  .carousel-indicators {
+    bottom: 50% !important;
+    margin: 0 !important;  
+    z-index: -1 !important;
+  }
+  
+  .switchLanguaje {
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    height: 34px;
+    margin-right: 26px;
+
+    & input {
+        display:none;
+        }
+  }
+
+  .btnSlide {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 2;
+    background-color: rgb(133, 131, 131);
+    -webkit-transition: .4s;
+    transition: .4s;
+    padding: 7px;
+    color: rgb(255, 255, 255);
+
+    &:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 78px;
+        bottom: 6px;
+        background-color: rgb(141, 141, 148);
+        border: solid 1px rgb(255, 255, 255);
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+  }
+
+  input:checked + .btnSlide {
+    background-color: #ffffff;
+    padding-left: 40px;
+    color: rgb(4, 11, 27);
+    font-weight: bolder;
+
+    &:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+        left: -20px;
+      }
+    }
+
+  .btnSlide.round {
+    border-radius: 34px;
+
+    &:before {
+        border-radius: 50%;
+      }
+  }
+
+  input:checked + .btnSlide:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    left: -20px;}
+
+  ul.timeline  {
+    list-style-type: none;
+    position: relative;
+    color: white;
+    margin-right: 10%;
+
+    &> li > a {
+        text-decoration: none !important;
+        color: rgb(255, 255, 255);
+
+        &:hover {
+            text-decoration: none !important;
+            color: #333;
+        }
+      }
+
+    &:before {
+        content: ' ';
+        background: #d4d9df;
+        display: inline-block;
+        position: absolute;
+        left: 29px;
+        width: 2px;
+        height: 100%;
+        z-index: 400;
+      }
+
+    &> li {
+        margin: 20px 0;
+        padding-left: 20px;
+
+          &> p{
+            border-top: solid 1px rgb(94, 93, 93);
+          }
+
+          &:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border-radius: 5px;
+
+            &> a {
+                color: rgb(0, 0, 0);
+                font-size: large;
+                font-weight: bold;
+              }
+          }
+
+          &:before {
+            content: ' ';
+            background: white;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid #0c5061;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            z-index: 400;
+          }
+      }
+
+  }
+
+  .gridWeb {
+    display: $gridWeb-display; 
+    /* Columns */
+    grid-template-columns: $gridWeb-columns; 
+    /* Rows */
+    grid-template-rows: $gridWeb-rowns; 
+
+    & div{
+      text-align: $gridWeb-align;
+      margin: $gridWeb-margin;
+      background-color: $gridWeb-background;
+    }
+
+    & a{
+        text-decoration: none !important;
+        color: $gridWeb-fontcolor;
+      }
+  }
+
+  .scaleZoom{
+    &:hover {
+    transform: scale($scaleZoom-x,$scaleZoom-y); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+}
+
+.modal-content{
+    background-color: rgb(255, 255, 255) !important;
+    height: auto !important;
+    min-width: auto !important;
+  }
+
+.modal-dialog-contact{
+    max-width: 100% !important;
+  }
+  
+  .maps-iframe{
+    padding: 10px 0 10px 0;
+  }
+  
+  .w-rights{
+  margin-top: 5px;
+  color: white !important;
+  }
+  
+  .center-screen {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.9;
+    position:fixed;
+    z-index: 900;  
+    top:0;  
+    left:0;
+    right: 0;  
+    padding-top: 24%;
+    width:auto;  
+    height:100vh; 
+    text-align: center;
+  }
+
+  .light-bulb {
+    margin-left: 85px;
+    width: 800px;
+    height: 600px;
+    transition: 1s;
+    background: url("../img/bombilla-off.png") no-repeat;
+    display: inline-block;
+      &:hover{
+        transition: 0.5s;
+        background: transparent url("../img/bombilla-on.png") no-repeat;
+      }
+  }
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for
+ the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
+@media screen and (max-width: 576px) {
+  .topnav a:not(:first-child) {display: none;}
+  .content {padding-top: 20% !important;}
+  .item{margin-bottom: 100px;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .topnav a:not(:first-child) {display: none;}
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on 
+the icon. This class makes the topnav look good on small screens (display 
+the links vertically instead of horizontally) */
+
+@media screen and (max-width:  700px) {
+  .topnav.responsive {position: relative;}
+  .img-fluid{margin-top: 50%;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;}
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;}
+}
+
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100% 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left {
+-webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
+}
+
+/* BEM IMPLEMENTATION*/
+
+.modal__title {
+	font-size:1.5rem !important; 
+	margin-bottom: 20px !important; 
+}
+
+.modal__title--uppercase {
+	text-transform: uppercase;
+}
+
+.modal__paragraph {
+	line-height: 28px !important; 
+	font-size:1rem !important; 
+}
+
+.modal__paragraph--important{
+	color: rgb(184, 64, 17) !important; 
+	font-weight: bolder !important; 
+}
+
+/* SECTIONS */
+
+.section__title {
+	font-size:2.5rem !important; 
+	margin-bottom: 20px !important; 
+}
+
+.section__title--roboto {
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+}
+
+.section__paragraph {
+	line-height: 28px !important; 
+	font-size:1rem !important; 
+}
+
+.section__paragraph--important{
+	font-weight: bolder !important; 
+}

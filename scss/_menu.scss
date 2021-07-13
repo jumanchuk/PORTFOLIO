@@ -1,0 +1,36 @@
+/* menu */
+
+$item-color: transparent;
+$item-height: 100px;
+$item-position: relative;
+$item-text: center;
+$hover-color: rgb(151, 150, 151);
+
+/* Div menu */
+
+$div-w: 100px;
+$div-pos: absolute;
+
+  .menu {
+    padding-left: 10px !important; 
+    padding-top: 150%;
+  }
+
+  .menuItem {
+    color: $item-color;
+    height: $item-height;
+    position: $item-position;
+    text-align: $item-text;
+
+    & a:hover {
+        color: $hover-color;
+      }
+
+    & div {
+        position: $div-pos;
+        width: ($div-w)-20px;
+        transform: translate(-50%, -50%);
+        transform: rotate(-90deg);
+      }
+  }
+  

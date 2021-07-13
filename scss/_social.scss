@@ -1,0 +1,14 @@
+@each $colors, $value in $social-themes {
+    .fa-#{$colors} {
+      font-size: $social-size; 
+      @if $colors == "at" {
+        color:  #fff;
+      }@else{
+      color:  $social-colorbase;
+      } 
+      margin: $social-margin;
+      &:hover{
+          color: $value;
+        }
+    }
+  }
